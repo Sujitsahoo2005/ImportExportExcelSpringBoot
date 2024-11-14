@@ -1,0 +1,45 @@
+application:
+  baseUrl: https://odishataekwondoassociation.com/assets/
+  #    baseUrl: http://13.234.5.189:8099/assets/assets/
+  #  baseUrl: http://localhost:8004/assets/
+  assetPath: /var/www/ota/assets/
+#    assetPath: /Users/sumanagrawala/git/clickezy_backend
+#  assetPath: file:/C:/Users/Satyajeet/testingpurpose/assets/
+
+server:
+  tomcat:
+    accesslog:
+      enable: true
+      directory: log
+  port: 8004
+spring:
+  banner:
+    location: classpath:banner.txt
+  datasource:
+
+
+    url: jdbc:mysql://localhost:3306/importexportdemo
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: rootroot
+  jpa:
+    #    show-sql: true
+    hibernate.ddl-auto: update
+    autoconfigure:
+      exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+    #    generate-ddl: true
+    #    properties:
+    #      hibernate:
+    #        dialect: org.hibernate.dialect.Dialect
+    #    hibernate:
+    #      ddl-auto: update
+    resources:
+      add-mappings: false
+    mvc:
+      throw-exception-if-no-handler-found: true
+spring.mvc.pathmatch.matching-strategy: ant_path_matcher
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2-ui
+Access-Control-Allow-Origin: true
